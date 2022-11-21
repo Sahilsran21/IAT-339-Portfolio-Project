@@ -49,6 +49,7 @@ code {
 
 /* TITLE ELEMENTS */
 
+/* CSS format from "Ecommerce Product Page Design" tutorial by GeekProbin */
 .portfolio_title_large
 .portfolio_title_medium
 .portfolio_title_small{
@@ -186,7 +187,8 @@ code {
   background: var(--color_page_background);
 }
 
-/* Column grids for font and colour */
+/* Column grids for font and colour
+   Used "How to Create an Image Grid Gallery" tutorial from dcode. */
 .colour_palette_grid {
   --gap: 30px;
   --col_count: 4;
