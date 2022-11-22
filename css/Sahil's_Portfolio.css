@@ -7,6 +7,14 @@
 
 /* GENERAL STYLING */
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
 @font-face {
   font-family:"Geonik-Pro-Regular";
   src: url("../fonts/Geonik-Pro-Regular.otf") format("opentype");
@@ -30,10 +38,10 @@ body {
   font-size: 18px;
   line-height: 20px;
   font-family: 'Noto-Sans-Regular', sans-serif;
+  background-color: var(--color_page_background);
 }
 
 code {
-  background-color: var(--color_page_background);
   padding: 0.5rem;
   display: block;
 }
@@ -86,4 +94,92 @@ code {
   opacity: 0.7;
   margin: 0.2rem 0;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/* NAVIGATION HEADER */
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  transition: all .50s ease;
+}
+
+.header{
+  height: 100vh;
+  width: 100%;
+  padding: 0 0%;
+  position: relative;
+}
+
+nav{
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo{
+  display: flex;
+  align-items: right;
+  width: 70px;
+}
+
+.logo i{
+  color: var(--color_primary);
+  font-size: 28px;
+  margin-right: 3px;
+}
+
+.logo span{
+  color: var(--color_primary);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.navigation_bar{
+  display: flex;
+}
+
+.navigation_bar li{
+  display: inline-block;
+}
+
+.navigation_bar li a{
+  color: var(--color_primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0px 30px;
+  box-shadow: inset 0 0 0 0 var(--color_button);
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  position: relative;
+}
+
+.navigation_bar a:hover{
+  box-shadow: inset 0 -50px 0 0 var(--color_hover);   /* Sliding transition referenced from 6 creative ideas for CSS Link Hover */
+  color: var(--color_primary);
+}
+
+.nav-background{
+  background-color: var(--color_page_background);
 }
