@@ -9,13 +9,9 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/ed5a3a25a1.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-
-
-
 
 
 <!-- TITLE AND NAVIGATION SECTION -->
@@ -36,19 +32,181 @@
 
 
 
-<!--JAVASCRIPT LINK--->
-<!--
-<script type="text/javascript" src="js/script.js"> </script>
--->
-<script>
-  let hamburgerMenu = document.querySelector('#hamburger_menu_icon');
-  let navigationBar = document.querySelector('.navigation_bar');
 
-  hamburgerMenu.onclick = () => {
-    hamburgerMenu.classList.toggle('bx-x');
-    navigationBar.classList.toggle('open');
-  }
-</script>
+
+
+<!--
+<section id="gallery">
+    <div class= "image_grid">
+      <img src="img/Mount_3.jpg" alt="Myself riding a seal." class = "image_grid_element">
+      <img src="img/Mount_2.jpg" alt="Finn riding Jake." class = "image_grid_element">
+      <img src="img/Mount_1.jpg" alt="Clancy riding a Deerdog." class = "image_grid_element">
+      <img src="img/Youtube_Seal.jpeg" alt="Youtube Seal." class = "image_grid_element">
+      <img src="img/Instagram_Seal.jpeg" alt="Instagram Seal." class = "image_grid_element">
+      <img src="img/Discord_Seal.jpeg" alt="Discord Seal." class = "image_grid_element">
+      <img src="img/Yoe_Mase_Seal.jpeg" alt="Yoe Mase Seal" class = "image_grid_element">
+      <img src="img/Jessie_Frye_Seal.jpeg" alt="Jessie Frye Seal." class = "image_grid_element">
+      <img src="img/Tilian_Pearson_Seal.jpeg" alt="Tilian Pearson Seal." class = "image_grid_element">
+    </div>
+</section>
+-->
+
+
+
+
+
+
+<!-------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------->
+<!-- Used a combination of 3 tutorials from the two previous projects to build the reactive image gallery:
+          - How TO - Image Hover Overlay by W3schools
+          - Ecommerce Product Page Design Using HTML & CSS by GeekProbin, 2022
+          - How to Create an Image Grid Gallery - HTML, CSS Web Design Tutorial by dcode, 2021
+
+    Additionally: Blur Image on Hover with CSS by Jonathan Klughertz, 2016
+-->
+
+<section id="gallery">
+    <div class= "image_grid">
+
+              <!--Column 1-->
+              <!--Yoe Mase Art-->
+              <div class = "artwork">
+                <div class = "artwork_content">
+                  <div class="artwork_img_container">
+                    <figure>
+                      <img src="img/Yoe_Mase_Seal.jpeg" alt="artwork" class = "image_grid_element">
+                    </figure>
+                  </div>
+                    <div class = "artwork_description_overlay">
+                        <p class = "artwork_description"> Seal Musicians #3: Yoe Mase as a grey seal, 2022 </p>
+                    </div>
+                </div>
+              </div>
+
+              <!--Jessie Frye Art-->
+              <div class = "artwork">
+                <div class = "artwork_content">
+                  <div class="artwork_img_container">
+                    <figure>
+                      <img src="img/Jessie_Frye_Seal.jpeg" alt="artwork" class = "image_grid_element">
+                    </figure>
+                  </div>
+                    <div class = "artwork_description_overlay">
+                        <p class = "artwork_description"> Seal Musicians #2: Jessie Frye as a harp seal pup, 2022 </p>
+                    </div>
+                </div>
+              </div>
+
+              <!--Tilian Pearson Art-->
+              <div class = "artwork">
+                <div class = "artwork_content">
+                  <div class="artwork_img_container">
+                    <figure>
+                      <img src="img/Tilian_Pearson_Seal.jpeg" alt="artwork" class = "image_grid_element">
+                    </figure>
+                  </div>
+                    <div class = "artwork_description_overlay">
+                        <p class = "artwork_description"> Seal Musicians #1: Tilian Pearson as a weddell seal, 2022 </p>
+                    </div>
+                </div>
+              </div>
+
+
+              <!--Column 2-->
+                  <!--Discord Seal Art-->
+                  <div class = "artwork">
+                    <div class = "artwork_content">
+                      <div class="artwork_img_container">
+                        <figure>
+                          <img src="img/Discord_Seal.jpeg" alt="artwork" class = "image_grid_element">
+                        </figure>
+                      </div>
+                        <div class = "artwork_description_overlay">
+                            <p class = "artwork_description"> Twitch Socials #3: Joker as a grey seal, 2022 </p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!--Instagram Seal Art-->
+                  <div class = "artwork">
+                    <div class = "artwork_content">
+                      <div class="artwork_img_container">
+                        <figure>
+                          <img src="img/Instagram_Seal.jpeg" alt="artwork" class = "image_grid_element">
+                        </figure>
+                      </div>
+                        <div class = "artwork_description_overlay">
+                            <p class = "artwork_description"> Twitch Socials #2: Roxas as a ringed seal, 2022 </p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!--Youtube Seal Art-->
+                  <div class = "artwork">
+                    <div class = "artwork_content">
+                      <div class="artwork_img_container">
+                        <figure>
+                          <img src="img/Youtube_Seal.jpeg" alt="artwork" class = "image_grid_element">
+                        </figure>
+                      </div>
+                        <div class = "artwork_description_overlay">
+                            <p class = "artwork_description"> Twitch Socials #1: Sora as a harbour seal, 2022 </p>
+                        </div>
+                    </div>
+                  </div>
+
+
+
+
+              <!--Column 3-->
+                  <!--Seal Mount Art-->
+                  <div class = "artwork">
+                    <div class = "artwork_content">
+                      <div class="artwork_img_container">
+                        <figure>
+                          <img src="img/Mount_3.jpg" alt="artwork" class = "image_grid_element">
+                        </figure>
+                      </div>
+                        <div class = "artwork_description_overlay">
+                            <p class = "artwork_description"> Horsemen Series #3: Myself riding a harbour seal, 2021 </p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!--Jake the dog Mount Art-->
+                  <div class = "artwork">
+                    <div class = "artwork_content">
+                      <div class="artwork_img_container">
+                        <figure>
+                          <img src="img/Mount_2.jpg" alt="artwork" class = "image_grid_element">
+                        </figure>
+                      </div>
+                        <div class = "artwork_description_overlay">
+                            <p class = "artwork_description"> Horsemen Series #2: Finn riding Jake, 2021 </p>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!--Deerdog Mount Art-->
+                  <div class = "artwork">
+                    <div class = "artwork_content">
+                      <div class="artwork_img_container">
+                        <figure>
+                          <img src="img/Mount_1.jpg" alt="artwork" class = "image_grid_element">
+                        </figure>
+                      </div>
+                        <div class = "artwork_description_overlay">
+                            <p class = "artwork_description"> Horsemen Series #1: Clancy riding a Deerdog, 2021 </p>
+                        </div>
+                    </div>
+                  </div>
+    </div>
+</section>
+
+
+
+
 
 
 
@@ -74,15 +232,17 @@
           please email me at sahilsran21@gmail.com </a> </button>
         </form>
   </div>
-
 </div>
 
 <hr>
   <p class="copyright"> © Sahil Sran 2022 - IAT 339 Fall 2022 </p>
-
 </footer>
 
 
+
+<!--JAVASCRIPT LINK--->
+      <!--*Note: Javascript link must be placed at bottom of html file within body property--->
+<script type="text/javascript" src="js/script.js"> </script>
 
 
 </body>
