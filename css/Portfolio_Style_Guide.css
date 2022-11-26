@@ -7,6 +7,14 @@
 
 /* GENERAL STYLING */
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
 @font-face {
   font-family:"Geonik-Pro-Regular";
   src: url("../fonts/Geonik-Pro-Regular.otf") format("opentype");
@@ -26,10 +34,12 @@ body {
   --color_hover: #A5FFD6;
   --color_button: #166379;
   --color_page_background: #EDF2F4;
+  --color_white: #FFFFFF;
 
   font-size: 18px;
   line-height: 20px;
   font-family: 'Noto-Sans-Regular', sans-serif;
+  background-color: var(--color_white);
 }
 
 code {
@@ -38,8 +48,9 @@ code {
   display: block;
 }
 
-
-
+.top_space{
+  padding-top: 120px;
+}
 
 
 
@@ -85,6 +96,311 @@ code {
   opacity: 0.7;
   margin: 0.2rem 0;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/* NAVIGATION HEADER */
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color_page_background);   /* Changed background property in header to add colour to entire header element */
+  padding: 28px 12%;
+  transition: all .50s ease;
+}
+
+.header{
+  height: 100vh;
+  width: 100%;
+  padding: 0 0%;
+  position: relative;
+}
+
+nav{
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo{
+  display: flex;
+  align-items: right;
+  width: 70px;
+}
+
+.logo i{
+  color: var(--color_primary);
+  font-size: 28px;
+  margin-right: 3px;
+}
+
+.logo span{
+  color: var(--color_primary);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.navigation_bar{
+  display: flex;
+}
+
+.navigation_bar li{
+  display: inline-block;
+}
+
+.navigation_bar li a{
+  color: var(--color_primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0px 30px;
+  box-shadow: inset 0 0 0 0 var(--color_button);
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  position: relative;
+}
+
+.navigation_bar a:hover{
+  box-shadow: inset 0 -50px 0 0 var(--color_hover);   /* Sliding transition referenced from 6 creative ideas for CSS Link Hover */
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  color: var(--color_primary);
+}
+
+.main{
+  display: flex;
+  align-items: center;
+}
+
+#hamburger_menu_icon{
+  font-size: 50px;
+  color: var(--color_primary);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media (max-width: 1280px){
+  header{
+    padding: 20px 2%;
+    transition: 0.4s;
+  }
+  .navigation_bar a{
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 600px){
+  #hamburger_menu_icon{
+    display: block;
+  }
+  .navigation_bar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 200px;
+    height: 26vh;
+    background: linear-gradient(to right, var(--color_page_background), var(--color_white));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all .50s ease;
+  }
+  .navigation_bar li a{
+    display: block;
+    margin: 15px 0;
+    padding: 0px 18px;
+    transition: all .50s ease;
+    font-size:`18px;
+    width: 90px;
+  }
+  .navigation_bar li a:hover{
+    border-radius: 0%;
+  }
+  .navigation_bar li a.active{
+    border-radius: 0%;
+  }
+  .navigation_bar.open{
+    right: 2%;
+  }
+}
+
+
+.nav-background{
+  background-color: var(--color_page_background);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/* WEBSITE FOOTER */
+
+footer{
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-bottom: calc(25% - 50vh);
+    position: bottom;
+    bottom: 0;
+    background: linear-gradient(to right, var(--color_button), var(--color_primary));
+    color: var(--color_page_background);
+    padding: 15px 10px 30px 0px;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.footer_row{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer_column{
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.footer_column h3{
+  width: fit-content;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 19px;
+}
+
+.footer_column p{
+  list-style: none;
+  margin-bottom: 14px;
+  font-size: 14px;
+  max-width: 200px;   /*Controls the 1st paragraph so it balances white space with the rest of the elements*/
+  color: var(--color_white);
+}
+
+.footer_column p a{
+  text-decoration: underline;
+  color: var(--color_white);
+}
+
+.footer_column p:hover a {
+  color: var(--color_hover);
+}
+
+.footer_column form{
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid var(--color_white);
+  margin-bottom: 50px;
+}
+
+.footer_column form .far{
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.footer_column form input{
+  width: 100%;
+  background: transparent;
+  color: var(--color_white);
+  border: 0;
+  outline: none;
+  font-size: 14px;
+}
+
+.footer_column form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer_column form button .fas{
+  font-size: 16px;
+  color: var(--color_white);
+}
+
+.footer_column .footer_contact a{
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--color_white);
+}
+
+.footer_column .footer_contact:hover a{
+  color: var(--color_hover);
+}
+
+.footer_column p a{
+  text-decoration: underline;
+  color: var(--color_white);
+}
+
+.footer_column p:hover a {
+  color: var(--color_hover);
+}
+
+
+.copyright{
+  text-align: center;
+  margin-bottom: -15px;
+}
+
+.underline{
+  width: 100%;
+  height: 4px;
+  background: var(--color_white); /* Resorted to using colour code instead of variable for underline since the latter wasn't functional */
+  border-radius: 3px;
+  position: absolute;
+  top: 22px;
+  left: 0;
+}
+
+
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+
+    .footer_column{
+        flex-basis: 100%;
+    }
 }
 
 
