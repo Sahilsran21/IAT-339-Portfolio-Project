@@ -48,7 +48,7 @@ code {
 }
 
 .top_space{
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
 
@@ -964,6 +964,89 @@ footer{
     line-height: 35px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/* PROJECT 1 */
+
+.project_1_content{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 7rem;
+  align-items: center;
+  padding: 0 5rem;
+  padding-top: 60px;
+}
+
+.project_1_image_content{
+  position: relative;
+  width: 570px;
+  height: auto;
+  border: 6px solid var(--color_page_background);
+}
+
+.project_1_image{
+  width: 550px;
+  height: auto;
+  border-radius: 5%;
+  position: relative;
+}
+
+.project_1_image_textBox{
+  position: absolute;
+  bottom: 10%;
+  right: -5rem;
+  padding: 2rem;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  border: 6px solid var(--color_page_background);
+  background-color: var(--color_white);
+}
+
+.project_1_image_textBox .project_1_description{
+  text-align: center;
+}
+
+.project_1_title{
+  color: var(--color_primary);
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.project_1_description{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  margin: 0.2rem 0;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
