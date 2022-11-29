@@ -51,6 +51,10 @@ code {
   padding-top: 80px;
 }
 
+.bottom_space{
+  padding-top: 80px;
+}
+
 
 
 
@@ -71,7 +75,7 @@ code {
 
 .portfolio_title_large{
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   padding: 1.3rem 0;
   opacity: 0.9;
@@ -420,6 +424,15 @@ footer{
     z-index: -100;
 }
 
+.back-image{
+    width: 92vw;
+    margin-left: calc(50% - 46vw);
+    margin-top: calc(25% - 51vh);
+    height: 92vh;
+    position: relative;
+    z-index: -100;
+}
+
 .page_title{
   position: absolute;
   text-align: center;
@@ -433,14 +446,14 @@ footer{
 
 .page_title h1{
   font-size: 52px;
-  text-shadow: 2px 2px 2px var(--color_primary);
+  text-shadow: 0px 0px 10px var(--color_primary);
   letter-spacing: 1px;
   margin-bottom: 40px;
 }
 
 .page_title h2{
   font-size: 30px;
-  text-shadow: 2px 2px 1px var(--color_primary);
+  text-shadow: 0px 0px 7px var(--color_primary);
   font-weight: 100;
   letter-spacing: 3px;
   word-spacing: 8px;
@@ -985,37 +998,55 @@ footer{
   column-gap: 7rem;
   align-items: center;
   padding: 0 5rem;
-  padding-top: 60px;
 }
 
 .project_1_image_content{
   position: relative;
   width: 570px;
   height: auto;
-  border: 6px solid var(--color_page_background);
+  /* border: 6px solid var(--color_page_background); */
 }
 
 .project_1_image{
   width: 550px;
   height: auto;
-  border-radius: 5%;
   position: relative;
+}
+
+.banner_image_project_1{
+    width: 92vw;
+    margin-left: calc(50% - 46vw);
+    margin-top: calc(25% - 51vh);
+    height: 92vh;
+    position: relative;
+    z-index: -100;
 }
 
 .project_1_image_textBox{
   position: absolute;
-  bottom: 10%;
-  right: -5rem;
-  padding: 2rem;
-  max-width: 360px;
+  bottom: -20%;
+  right: -1rem;
+  padding: 0.7rem;
+  max-width: 600px;
   width: 100%;
-  text-align: center;
   border: 6px solid var(--color_page_background);
   background-color: var(--color_white);
 }
 
-.project_1_image_textBox .project_1_description{
-  text-align: center;
+/* Spacing change for Figure 1 text box since it's contents take up only 1 line */
+.project_1_figure_1_image_textBox{
+  position: absolute;
+  bottom: -17%;
+  right: -1rem;
+  padding: 0.7rem;
+  max-width: 400px;
+  width: 100%;
+  border: 6px solid var(--color_page_background);
+  background-color: var(--color_white);
+}
+
+.project_1_image_textBox .project_1_description .project_1_image_description{
+  text-align: left;
 }
 
 .project_1_title{
@@ -1026,15 +1057,46 @@ footer{
   padding-bottom: 30px;
   text-align: center;
 }
+.project_1_header_title{
+  position: absolute;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  left: 50%;
+  top: 60%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  padding: 1.3rem 0;
+  max-width: 900px;
+  text-shadow: 0px 0px 15px var(--color_primary);
+  color: var(--color_white);
+}
 
 .project_1_description{
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.8;
-  margin: 0.2rem 0;
-  text-align: left;
+  line-height: 1.8rem;
+  margin: 0px 0;
 }
 
+.project_1_image_description{
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin: 0px 0;
+}
+
+.project_1_top_space{
+  padding-top: 140px;
+}
+
+.project_1_bottom_space{
+  padding-bottom: 200px;
+}
+
+.project_1_intro_section_bottom_space{
+  padding-bottom: 160px;
+}
 
 
 
