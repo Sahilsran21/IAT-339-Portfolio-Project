@@ -990,7 +990,7 @@ footer{
 /*--------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
-/* PROJECT 1 */
+/* PROJECT 1 PAGE */
 
 .project_1_content{
   display:grid;
@@ -1013,7 +1013,7 @@ footer{
   position: relative;
 }
 
-.banner_image_project_1{
+.project_1_banner_image{
     width: 92vw;
     margin-left: calc(50% - 46vw);
     margin-top: calc(25% - 51vh);
@@ -1098,6 +1098,142 @@ footer{
   padding-bottom: 160px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/* PROJECT 2 PAGE */
+
+.project_2_content{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 7rem;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.project_2_image_content{
+  position: relative;
+  width: 570px;
+  height: auto;
+  /* border: 6px solid var(--color_page_background); */
+}
+
+.project_2_image{
+  width: 550px;
+  height: auto;
+  position: relative;
+}
+
+.project_2_banner_image{
+    width: 92vw;
+    margin-left: calc(50% - 46vw);
+    margin-top: calc(25% - 51vh);
+    height: 92vh;
+    position: relative;
+    z-index: -100;
+}
+
+.project_2_image_textBox{
+  position: absolute;
+  bottom: -13%;
+  right: -1rem;
+  padding: 0.7rem;
+  max-width: 600px;
+  width: 100%;
+  border: 6px solid var(--color_page_background);
+  background-color: var(--color_white);
+}
+
+/* Spacing change for Figure 1 text box since it's contents take up only 1 line */
+.project_2_figure_1_image_textBox{
+  position: absolute;
+  bottom: -23%;
+  right: -1rem;
+  padding: 0.7rem;
+  max-width: 400px;
+  width: 100%;
+  border: 6px solid var(--color_page_background);
+  background-color: var(--color_white);
+}
+
+.project_2_image_textBox .project_2_description .project_2_image_description{
+  text-align: left;
+}
+
+.project_2_title{
+  color: var(--color_primary);
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.project_2_header_title{
+  position: absolute;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  left: 50%;
+  top: 60%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  padding: 1.3rem 0;
+  max-width: 900px;
+  text-shadow: 0px 0px 15px var(--color_primary);
+  color: var(--color_white);
+}
+
+.project_2_description{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8rem;
+  margin: 0px 0;
+}
+
+.project_2_image_description{
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin: 0px 0;
+}
+
+.project_2_top_space{
+  padding-top: 140px;
+}
+
+.project_2_bottom_space{
+  padding-bottom: 200px;
+}
+
+.project_2_intro_section_bottom_space{
+  padding-bottom: 160px;
+}
 
 
 
@@ -1222,4 +1358,143 @@ footer{
 
 .feedback_form ::placeholder{
   color: var(--color_white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/* POP-UP ALERT NOTIFICATION ELEMENT */
+
+.my-btn{
+	margin:0;
+	padding:400px;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+.alert_box {
+    background: var(--color_page_background);
+    padding: 20px 40px;
+    min-width: 420px;
+    position: fixed;     /* Allows the alert_box to be stationary on the page as it scrolls */
+    right: 0px;
+    top: 30px;
+    overflow: hidden;
+    border-radius: 4px;
+    border-left: 8px solid var(--color_button);
+}
+
+.alert_box .close_alert_button{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color_button);
+    padding: 20px 18px;
+    cursor: pointer;
+}
+
+.alert_box .alert_box_message{
+    padding: 0 20px;
+    font-size: 18px;
+    color: var(--color_button);
+}
+
+.alert_box .fa-heart{
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color_button);
+    font-size: 25px;
+}
+
+.close_alert_button{
+  background: var(--color_white);
+}
+
+.close_alert_button .fa-times{
+    color: var(--color_white);
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.alert_box.show::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--color_primary);
+  width: 90%;
+  box-sizing: border-box;
+	animation: hideMeter 5s linear;
+}
+
+@keyframes hideMeter {
+	0%{
+		width: 100%;
+	}
+	100%{
+		width: 0%;
+	}
+}
+
+ /* Show and hide CSS must be written together with alert_box as such */
+.alert_box.show{
+	animation: showAlert 1s ease forwards;
+}
+@keyframes showAlert{
+	0%{
+		transform: translateX(100%);
+	}
+	40%{
+		transform: translateX(-15%);
+	}
+	80%{
+	   transform: translateX(0%);
+	}
+	100%{
+	   transform: translateX(-10px);
+	}
+}
+
+.alert_box.hide{
+	animation: hideAlert 1s ease forwards;
+}
+
+@keyframes hideAlert{
+	0%{
+		transform: translateX(-10px);
+	}
+	40%{
+		transform: translateX(0%);
+	}
+	80%{
+		transform: translateX(-15%);
+	}
+	100%{
+	   transform: translateX(100%);
+	}
 }
