@@ -192,6 +192,8 @@ nav{
   align-items: center;
 }
 
+/* Problem identified - hamburger_menu_icon as a ID can only be referenced once per page. As of now, it is
+   only functional on Home Page */
 #hamburger_menu_icon{
   font-size: 50px;
   color: var(--color_primary);
@@ -199,7 +201,6 @@ nav{
   z-index: 10001;
   display: none;
 }
-
 
 
 
@@ -1135,6 +1136,7 @@ footer{
 .project_1_header_title{
   position: absolute;
   text-align: center;
+  line-height: 70px;
   font-size: 3rem;
   font-weight: 700;
   left: 50%;
@@ -1172,22 +1174,6 @@ footer{
 .project_1_intro_section_bottom_space{
   padding-bottom: 160px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1317,6 +1303,50 @@ footer{
 
 
 
+/* Activates in accordance with media query */
+.project_mobile_view_spacing_1{
+  padding-bottom: 0px;
+}
+
+.project_mobile_view_spacing_2{
+  padding-bottom: 0px;
+}
+
+.project_mobile_view_spacing_3{
+  padding-bottom: 0px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .project_1_content{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 7rem;
+    align-items: center;
+    padding: 0 5rem;
+  }
+
+  .project_2_content{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 7rem;
+    align-items: center;
+    padding: 0 5rem;
+  }
+
+  .project_mobile_view_spacing_1{
+    padding-bottom: 120px;
+  }
+
+  .project_mobile_view_spacing_2{
+    padding-bottom: 80px;
+  }
+
+  .project_mobile_view_spacing_3{
+    padding-bottom: 150px;
+  }
+}
 
 
 
