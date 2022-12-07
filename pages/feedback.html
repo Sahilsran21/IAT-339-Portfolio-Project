@@ -23,8 +23,7 @@
           <ul class= "navigation_bar">
               <li> <a href="../index.html">Home</a> </li>
               <li> <a href="about.html">About</a> </li>
-              <li> <a href="project_1.html">Project 1</a> </li>
-              <li> <a href="project_2.html">Project 2</a> </li>
+              <li> <a href="works.html">Works</a> </li>
           </ul>
 
           <div class = "main">
@@ -42,7 +41,8 @@
     <div class = "feedback_form_backdrop">
       <div class = "feedback_form">
         <form>
-          <h3 class = "portfolio_title_large"> Feedback Form </h3>
+          <h3 class = "feedback_title"> Contact Me </h3>
+          <div class = "feedback_bottom_space"> </div>
 
           <div class = "feedback_form_row">
             <div class = "feedback_input_group">
@@ -79,11 +79,56 @@
     <!-- ALERT NOTIFICATION WHEN FEEDBACK IS FILLED OUT AND COMPLETED -->
     <div class = "alert_box hide hidden">
          <span class="fas fa-solid fa-heart"> </span>
-            <span class ="alert_box_message"> Thanks for the feedback! </span>
+            <span class ="alert_box_message"> Message Sent! </span>
                 <span class = "close_alert_button">
                     <span class ="fas fa-times"> </span>
                 </span>
     </div>
+
+
+
+
+
+    <!-- Nested javascript element here since javascript link was not working -->
+    <script>
+         const cartButton=document.querySelector(".form_button");
+         const alertBox=document.querySelector(".alert_box");
+         const closeButton=document.querySelector(".close_alert_button")
+         let timer;
+
+
+
+         cartButton.addEventListener("click",function () {
+              showAlertBox();
+         })
+
+         closeButton.addEventListener("click",function () {
+              hideAlertBox();
+              clearTimeout(timer);
+         })
+
+         function showAlertBox(){
+            alertBox.classList.remove("hide");
+            alertBox.classList.add("show");
+            // hide animation onload
+
+            if(alertBox.classList.contains("hidden")){
+                alertBox.classList.remove("hidden");
+            }
+            timer=setTimeout(function(){
+                hideAlertBox();
+            },5000)
+         }
+
+         function hideAlertBox(){
+           alertBox.classList.remove("show");
+            alertBox.classList.add("hide");
+         }
+      </script>
+
+
+
+
 
 
 
@@ -103,8 +148,7 @@
       <div class = "footer_column">
         <h3> Contact <div class= "underline"> </div> </h3>
             <form>
-              <button type="submit" class="footer_contact"> <a href="feedback.html"> For inquiries,
-              please email me at sahilsran21@gmail.com </a> </button>
+              <button type="submit" class="footer_contact"> <a href="feedback.html"> sahilsran21@gmail.com </a> </button>
             </form>
       </div>
     </div>
@@ -116,7 +160,7 @@
 
 <!--JAVASCRIPT LINK--->
       <!--*Note: Javascript link must be placed at bottom of html file within body property--->
-<script type="text/javascript" src="../js/script.js"> </script>
+  <!-- <script type="text/javascript" src="../js/script.js"> </script> -->
 
 
 </body>

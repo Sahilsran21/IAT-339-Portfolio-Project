@@ -990,6 +990,81 @@ footer{
 /*--------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
+/* WORKS PAGE */
+
+.works_title{
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 0;
+  text-align: center;
+}
+
+.works_bottom_space{
+  padding-bottom: 40px;
+}
+
+.works_imagelink_description{
+    background: transparent;
+    width: 350px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+
+    color: var(--color_white);
+    text-shadow: 1px 1px 3px var(--color_primary);
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 40px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.works_imagelink_description:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1380px) {
+  .works_imagelink_description{
+    width: 300px;
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .works_imagelink_description{
+    width: 250px;
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .works_imagelink_description{
+    width: 300px;
+    font-size: 23px;
+    line-height: 35px;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
 /* PROJECT 1 PAGE */
 
 .project_1_content{
@@ -1255,12 +1330,21 @@ footer{
 
 /* FEEDBACK FORM */
 
+.feedback_title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.3rem 0;
+  opacity: 0.9;
+  color: var(--color_white);
+}
+
 .feedback_form_backdrop{
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-top: calc(50% - 92vh);
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.3), var(--color_button)), url(../img/Mount_2.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.3), var(--color_button)), url(../img/Project_1_Header.png);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -1360,6 +1444,9 @@ footer{
   color: var(--color_white);
 }
 
+.feedback_bottom_space{
+  padding-bottom: 110px;
+}
 
 
 
@@ -1497,4 +1584,61 @@ footer{
 	100%{
 	   transform: translateX(100%);
 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+/* REFERENCES LIST */
+
+.references_list_backdrop{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 130vh;
+  background-image: linear-gradient(rgba(0,0,0,0.1), var(--color_button)), url(../img/Shiba_Ending.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.references_list{
+  max-width: 1400px;
+  color: var(color_white);
+}
+
+.references_list h2{
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.references_list h3{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.references_list ul li{
+  list-style: none;
+  margin-bottom: 14px;
+  font-size: 14px;
+  margin-left: 50px;
+  color: var(color_white);
+}
+
+.references_list ul li a{
+  text-decoration: underline;
 }
