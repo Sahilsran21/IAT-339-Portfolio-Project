@@ -19,23 +19,19 @@
 
 <!-- TITLE AND NAVIGATION SECTION -->
 <header>
-      <img src = "../img/blepi_logo.png" alt="A logo for the site." class="logo">
-          <ul class= "navigation_bar">
-              <li> <a href="../index.html">Home</a> </li>
-              <li> <a href="about.html">About</a> </li>
-              <li> <a href="project_1.html">Project 1</a> </li>
-              <li> <a href="project_2.html">Project 2</a> </li>
-          </ul>
+      <img src = "../img/site_logo.png" alt="A logo for the site." class="logo">
+      <ul class= "navigation_bar">
+          <li> <a href="../index.html">Home</a> </li>
+          <li> <a href="about.html">About</a> </li>
+          <li> <a href="works.html">Works</a> </li>
+      </ul>
 
-          <div class = "main">
-            <div class = "bx bx-menu" id="hamburger_menu_icon"> </div>
-          </div>
+      <div class = "main">
+          <div class = "bx bx-menu" id="hamburger_menu_icon"> </div>
+      </div>
 
 </header>
-<div class = "top_space"> </div>
-
-
-
+<div class = "medium_top_space"> </div>
 
 
 
@@ -68,16 +64,16 @@
 
         </div>
       </div>
+</section>
 
-<br>
-
+<section class = "element">
     <h2 class = "portfolio_title_medium"> Fonts </h2>
 
       <div class = "portfolio_font_container">
         <div class = "portfolio_font_grid">
             <div class = "porfolio_font_grid_element">
                 <h2> Header - Geonik-Pro-Regular </h2>
-                    <p class = "geonik_pro_sample_font" > The quick brown fox jumped over the lazy dog. </p>
+                    <p class = "geonik_pro_regular_sample_font" > The quick brown fox jumped over the lazy dog. </p>
             </div>
 
             <div class = "porfolio_font_grid_element">
@@ -86,36 +82,112 @@
             </div>
         </div>
       </div>
-
 </section>
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- ******************************************************************************* -->
 <!-- ******************************************************************************* -->
-<!-- INTERACTION ELEMENTS SECTION -->
+<!-- INTERACTIVE ELEMENTS SECTION -->
+
+
+<!-- Home Page Banner Video -->
+<section class = "element">
+  <h2 class = "portfolio_title_medium"> Home Page Banner Video </h2>
+    <video autoplay loop class = "back-video" muted plays-inline>
+       <source src="../media/animated_works_compilation.mov" type="video/mp4">
+    </video>
+
+    <div class = "page_title">
+      <h1 class = "portfolio_title_large"> Sahil Sran </h1>
+      <h2 class = "portfolio_title_medium"> Animator, Writer, Illustrator </h2>
+    </div>
+</section>
 
 
 
-<!-- ******************************************************************************* -->
-<!-- ******************************************************************************* -->
-<!-- COMBINED ELEMENTS SECTION -->
+<!-- Project Page Banner Image -->
+<section class = "element">
+  <h2 class = "portfolio_title_medium"> Project Page Banner Image </h2>
+    <h2 class = "project_1_header_title"> Cat and Mouse: Unbounded Rivalry </h2>
+        <img src="../img/Project_1_Header.png" alt="Banner image for Project 1." class ="project_1_banner_image">
+</section>
 
 
 
+<!-- Image Gallery Art -->
+<section class = "element">
+  <h2 class = "portfolio_title_medium"> Image Gallery Art </h2>
+    <div class = "artwork">
+      <a href= "https://www.instagram.com/p/CdfamhhudYL/">
+        <div class = "artwork_content">
+          <div class="artwork_img_container">
+            <figure>
+              <img src="../img/Yoe_Mase_Seal.jpeg" alt="artwork" class = "image_grid_element">
+            </figure>
+          </div>
+            <div class = "artwork_description_overlay">
+                <p class = "artwork_description"> Seal Musicians #3: Yoe Mase as a grey seal, 2022 </p>
+            </div>
+        </div>
+      </a>
+    </div>
+</section>
 
 
 
+<!-- Image + Description -->
+<section class = "element">
+  <h2 class = "portfolio_title_medium"> Image + Description </h2>
+    <div class = "project_1_image_content">
+        <img src= "../img/Project_1_Figure_1.png" alt="process analysis." class="project_1_image">
+            <div class= "project_1_figure_1_image_textBox">
+                <p class = "project_1_image_description">
+                  Figure 1: Character Sheet of Oscar the Cat. By Sahil Sran, 2022.
+                </p>
+            </div>
+    </div>
+</section>
+
+
+
+<!-- Contact Form-->
+<div class = "small_top_space"> </div>
+<section class = "element">
+  <h2 class = "portfolio_title_medium"> Contact Form </h2>
+    <div class = "feedback_form_backdrop">
+      <div class = "feedback_form">
+        <form>
+          <h3 class = "feedback_title"> Contact Me </h3>
+          <div class = "feedback_bottom_space"> </div>
+
+          <div class = "feedback_form_row">
+            <div class = "feedback_input_group">
+              <input type="text" placeholder="Full Name" required class="feed">  <i class="fas fa-user icon"></i>
+            </div>
+            <div class = "feedback_input_group">
+              <input type="text" placeholder="Phone No" required class="feed">  <i class="fas fa-phone-square-alt icon"></i>
+            </div>
+          </div>
+
+          <div class = "feedback_input_group">
+              <input type="text" placeholder="Email Address" required class="feed">  <i class="fas fa-envelope icon"></i>
+          </div>
+
+          <div class = "feedback_input_group">
+              <!-- <textarea type ="message" rows="8" required> </textarea> -->
+              <!-- <label for="message"> <i class="fas fa-comments icon"></i> Your Message </label> -->
+              <input type="message" placeholder="Your Message" required class="feed" rows="8">  <i class="fas fa-comments icon"></i>
+          </div>
+
+           <fieldset>
+              <input class="form_button" type="Submit" name="Submit" value="Submit">
+           </fieldset>
+
+        </form>
+      </div>
+    </div>
+</section>
 
 
 
